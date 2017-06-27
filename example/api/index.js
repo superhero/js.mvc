@@ -4,6 +4,7 @@ module.exports = class extends Dispatcher
 {
   dispatch(o)
   {
-    o({ body : this.view.compose({ msg : 'Hello world!' }) });
+    o({ body : { status  : 'success',
+                 message : 'Hello world!' } });
   }
 }

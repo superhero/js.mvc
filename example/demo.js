@@ -1,3 +1,3 @@
 const config = require('./config');
 
-require('../lib/app').http(config.routes).listen(80);
+require('../lib/app').http(__dirname, config.routes).listen(80);

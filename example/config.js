@@ -2,22 +2,21 @@ module.exports =
 {
   routes :
   [
+    // default view deliverer
+    {
+      view : 'json',
+    },
     {
       policy     : '/',
-      view       : __dirname + '/../lib/view/json',
-      dispatcher : __dirname + '/api/index',
+      dispatcher : '/api/index',
     },
-
     {
       policy     : '/resource',
-      view       : __dirname + '/../lib/view/json',
-      dispatcher : __dirname + '/api/resource',
+      dispatcher : '/api/resource',
     },
-
     // fallback...
     {
-      view       : __dirname + '/../lib/view/json',
-      dispatcher : __dirname + '/api/404',
+      dispatcher : '/api/404',
     },
   ]
 }

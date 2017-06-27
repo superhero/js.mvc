@@ -1,0 +1,15 @@
+{
+  "name"        :  "@superhero/mvc",
+  "version"     :  "0.0.1",
+  "description" :  "yet another mvc framework",
+  "repository"  :  "git@github.com:superhero/js.mvc.git",
+  "main"        :  "lib/app.js",
+  "license"     :  "MIT",
+  "keywords"    : ["mvc","framework"],
+  "author"      :
+  {
+    "name"  : "Erik Landvall",
+    "email" : "erik@landvall.se",
+    "url"   : "http://erik.landvall.se"
+  }
+}

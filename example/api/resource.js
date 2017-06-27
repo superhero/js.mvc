@@ -4,21 +4,25 @@ module.exports = class extends RestDispatcher
 {
   get(o)
   {
-    o({ body : this.view.compose({ msg : 'retrieved' }) });
+    o({ body : { status  : 'success',
+                 message : 'retrieved' } });
   }
 
   post(o)
   {
-    o({ body : this.view.compose({ msg : 'created' }) });
+    o({ body : { status  : 'success',
+                 message : 'created' } });
   }
 
   put(o)
   {
-    o({ body : this.view.compose({ msg : 'updated' }) });
+    o({ body : { status  : 'success',
+                 message : 'updated' } });
   }
 
   delete(o)
   {
-    o({ body : this.view.compose({ msg : 'deleted' }) });
+    o({ body : { status  : 'success',
+                 message : 'deleted' } });
   }
 }
