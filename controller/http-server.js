@@ -20,7 +20,9 @@ module.exports = class HttpServer
 
   dispatch(i, o)
   {
-    const request =
+    const
+    self    = this,
+    request =
     {
       headers : i.headers,
       method  : i.method,
@@ -32,8 +34,8 @@ module.exports = class HttpServer
     i.on('end', () =>
     {
       const
-      route      = this.router.findRoute(request),
-      View       = fs.existsSync(root + '/' + route.view)
+      route      = self.router.findRoute(request),
+      View       = fs.existsSync(`${root}/${route.view}`)
                  ? require.main.require(route.view)
                  : require(`../view/${route.view}`),
       view       = new View(),

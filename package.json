@@ -1,6 +1,6 @@
 {
   "name"        :  "@superhero/mvc",
-  "version"     :  "0.0.2",
+  "version"     :  "0.0.3",
   "description" :  "yet another mvc framework",
   "repository"  :  "git@github.com:superhero/js.mvc.git",
   "main"        :  "app.js",
