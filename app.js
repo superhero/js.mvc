@@ -9,7 +9,7 @@ module.exports =
     server      = new HttpServer(router);
 
     return server;
-  }
+  },
 
   https : (root_dir, routes) =>
   {
