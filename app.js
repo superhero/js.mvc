@@ -1,6 +1,6 @@
 module.exports =
 {
-  http : (root_dir, routes) =>
+  http : (routes) =>
   {
     const
     HttpServer  = require('./controller/http-server'),
@@ -11,7 +11,7 @@ module.exports =
     return server;
   },
 
-  https : (root_dir, routes) =>
+  https : (routes) =>
   {
     const
     HttpsServer = require('./controller/https-server'),
