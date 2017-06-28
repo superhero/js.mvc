@@ -1,4 +1,4 @@
-const RestDispatcher = require('../../lib/controller/rest-dispatcher');
+const RestDispatcher = require('../../controller/rest-dispatcher');
 
 module.exports = class extends RestDispatcher
 {
