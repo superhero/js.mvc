@@ -8,15 +8,15 @@ module.exports =
     },
     {
       policy     : '/',
-      dispatcher : '/api/index',
+      dispatcher : './api/index',
     },
     {
       policy     : '/resource',
-      dispatcher : '/api/resource',
+      dispatcher : './api/resource',
     },
     // fallback...
     {
-      dispatcher : '/api/404',
+      dispatcher : './api/404',
     },
   ]
 }
