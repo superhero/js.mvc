@@ -34,7 +34,11 @@ module.exports = class HttpServer
     i.on('end', () =>
     {
       const
-      route      = self.router.findRoute(request),
+      route      = self.router.findRoute(request);
+
+      console.log(route);
+
+      const
       View       = fs.existsSync(`${root}/${route.view}`)
                  ? require.main.require(route.view)
                  : require(`../view/${route.view}`),
