@@ -12,7 +12,7 @@ module.exports = class Router
     && this.routes.some((_route) =>
     {
       route = Object.assign(route, _route);
-      return request.url.path.match(route.policy || '');
+      return request.url.path.match(route.policy || false);
     });
 
     return { dispatcher : route.dispatcher,
