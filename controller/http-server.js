@@ -10,6 +10,7 @@ module.exports = class HttpServer
   constructor(router)
   {
     this.router = router;
+    console.log('1', router);
     this.server = http.createServer(this.dispatch);
   }
 
@@ -20,6 +21,7 @@ module.exports = class HttpServer
 
   dispatch(i, o)
   {
+    console.log('2', this.router);
     const
     self    = this,
     request =

@@ -1,6 +1,6 @@
 module.exports = class Router
 {
-  constructor(root_dir, routes)
+  constructor(routes)
   {
     this.routes = routes;
   }
