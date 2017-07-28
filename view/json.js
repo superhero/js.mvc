@@ -1,7 +1,7 @@
 module.exports = class Json
 {
-  compose(data)
+  compose(data, cb)
   {
-    return JSON.stringify(data);
+    cb(JSON.stringify(data));
   }
 }
