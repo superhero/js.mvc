@@ -1,8 +1,9 @@
 module.exports = class Dispatcher
 {
-  constructor(request)
+  constructor(request, route)
   {
     this.request = request;
+    this.route   = route;
   }
 
   dispatch(o)

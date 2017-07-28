@@ -38,7 +38,7 @@ module.exports = class HttpServer
       View       = fetchView(route.view),
       Dispatcher = fetchDispatcher(route.dispatcher);
 
-      new Dispatcher(request).dispatch((vm) =>
+      new Dispatcher(request, route).dispatch((vm) =>
       {
         new View(route).compose(vm.body, (html) =>
         {
