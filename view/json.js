@@ -1,7 +1,12 @@
 module.exports = class Json
 {
-  compose(data, cb)
+  constructor(vm)
   {
-    cb(JSON.stringify(data));
+    this.vm = vm;
+  }
+
+  compose(cb)
+  {
+    cb(JSON.stringify(vm.body));
   }
 }

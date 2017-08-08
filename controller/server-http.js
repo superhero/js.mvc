@@ -40,7 +40,7 @@ module.exports = class HttpServer
 
       new Dispatcher(request, route).dispatch((vm) =>
       {
-        new View(route).compose(vm.body, (html) =>
+        new View(vm, route).compose((html) =>
         {
           o.writeHead(vm.status || 200, vm.headers);
           o.end(html);

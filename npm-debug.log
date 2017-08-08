@@ -1,0 +1,112 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   '--access',
+1 verbose cli   'public' ]
+2 info using npm@3.8.9
+3 info using node@v6.2.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/app/js.mvc',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /root/.npm/@superhero/mvc/0.0.13/package.tgz not in flight; packing
+9 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+10 info lifecycle @superhero/mvc@0.0.13~prepublish: @superhero/mvc@0.0.13
+11 silly lifecycle @superhero/mvc@0.0.13~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/root/.npm/@superhero/mvc/0.0.13/package.tgz',
+12 verbose tar pack   '/app/js.mvc' ]
+13 verbose tarball /root/.npm/@superhero/mvc/0.0.13/package.tgz
+14 verbose folder /app/js.mvc
+15 verbose addLocalTarball adding from inside cache /root/.npm/@superhero/mvc/0.0.13/package.tgz
+16 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd @superhero/mvc@0.0.13
+18 verbose afterAdd /root/.npm/@superhero/mvc/0.0.13/package/package.json not in flight; writing
+19 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /root/.npm/@superhero/mvc/0.0.13/package/package.json written
+21 silly publish { name: '@superhero/mvc',
+21 silly publish   version: '0.0.13',
+21 silly publish   description: 'yet another mvc framework',
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+ssh://git@github.com/superhero/js.mvc.git' },
+21 silly publish   main: 'app.js',
+21 silly publish   license: 'MIT',
+21 silly publish   keywords: [ 'mvc', 'framework' ],
+21 silly publish   author:
+21 silly publish    { name: 'Erik Landvall',
+21 silly publish      email: 'erik@landvall.se',
+21 silly publish      url: 'http://erik.landvall.se' },
+21 silly publish   gitHead: 'ed9ce822cb5098f7f7b11407dce1431a9e5562e2',
+21 silly publish   bugs: { url: 'https://github.com/superhero/js.mvc/issues' },
+21 silly publish   readme: 'ERROR: No README data found!',
+21 silly publish   homepage: 'https://github.com/superhero/js.mvc#readme',
+21 silly publish   _id: '@superhero/mvc@0.0.13',
+21 silly publish   scripts: {},
+21 silly publish   _shasum: '3bf3e7a895d9cdeeb9b914ec25170ffd504face0',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name @superhero/mvc
+24 silly mapToRegistry scope (from package name) @superhero
+25 verbose mapToRegistry no registry URL found in name for scope @superhero
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry data Result {
+28 silly mapToRegistry   raw: '@superhero/mvc',
+28 silly mapToRegistry   scope: '@superhero',
+28 silly mapToRegistry   name: '@superhero/mvc',
+28 silly mapToRegistry   rawSpec: '',
+28 silly mapToRegistry   spec: 'latest',
+28 silly mapToRegistry   type: 'tag' }
+29 silly mapToRegistry uri https://registry.npmjs.org/@superhero%2fmvc
+30 verbose publish registryBase https://registry.npmjs.org/
+31 silly publish uploading /root/.npm/@superhero/mvc/0.0.13/package.tgz
+32 verbose request uri https://registry.npmjs.org/@superhero%2fmvc
+33 verbose request sending authorization for write operation
+34 info attempt registry request try #1 at 3:11:48 PM
+35 verbose request using bearer token for auth
+36 verbose request id ca3713afc22d3dc6
+37 http request PUT https://registry.npmjs.org/@superhero%2fmvc
+38 http 403 https://registry.npmjs.org/@superhero%2fmvc
+39 verbose headers { 'content-type': 'application/json',
+39 verbose headers   'cache-control': 'max-age=0',
+39 verbose headers   'content-length': '96',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   date: 'Mon, 07 Aug 2017 13:11:50 GMT',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   connection: 'keep-alive',
+39 verbose headers   'x-served-by': 'cache-mad9428-MAD',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1502111509.832181,VS0,VE1784' }
+40 verbose request invalidating /root/.npm/registry.npmjs.org/_40superhero_252fmvc on PUT
+41 error publish Failed PUT 403
+42 verbose stack Error: "You cannot publish over the previously published version 0.0.13." : @superhero/mvc
+42 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+42 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+42 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+42 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:200:22)
+42 verbose stack     at emitTwo (events.js:106:13)
+42 verbose stack     at Request.emit (events.js:191:7)
+42 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+42 verbose stack     at emitOne (events.js:101:20)
+42 verbose stack     at Request.emit (events.js:188:7)
+42 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:988:12)
+43 verbose statusCode 403
+44 verbose pkgid @superhero/mvc
+45 verbose cwd /app/js.mvc
+46 error Linux 3.16.0-4-amd64
+47 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--access" "public"
+48 error node v6.2.0
+49 error npm  v3.8.9
+50 error code E403
+51 error "You cannot publish over the previously published version 0.0.13." : @superhero/mvc
+52 error If you need help, you may report this error at:
+52 error     <https://github.com/npm/npm/issues>
+53 verbose exit [ 1, true ]
