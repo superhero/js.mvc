@@ -7,18 +7,18 @@ module.exports = class Router
 
   findRoute(request)
   {
-    let route = {};
+    let _route = {};
     request.url && request.url.path
-    && this.routes.some((_route) =>
+    && this.routes.some((route) =>
     {
       if(route.policy && !request.url.path.match(route.policy))
         return;
 
-      route = Object.assign(route, _route);
+      _route = Object.assign(_route, route);
       return !!route.policy;
     });
 
-    return { dispatcher : route.dispatcher,
-             view       : route.view };
+    return { dispatcher : _route.dispatcher,
+             view       : _route.view };
   }
 }
