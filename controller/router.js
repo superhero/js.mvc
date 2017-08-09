@@ -11,8 +11,11 @@ module.exports = class Router
     request.url && request.url.path
     && this.routes.some((_route) =>
     {
+      if(route.policy && !request.url.path.match(route.policy))
+        return;
+
       route = Object.assign(route, _route);
-      return request.url.path.match(route.policy || false);
+      return !!route.policy;
     });
 
     return { dispatcher : route.dispatcher,
