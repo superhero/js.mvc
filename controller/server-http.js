@@ -21,7 +21,7 @@ module.exports = class HttpServer
   dispatch(i, o)
   {
     const
-    self    = this,
+    router  = this.router,
     request =
     {
       headers : i.headers,
@@ -34,12 +34,12 @@ module.exports = class HttpServer
     i.on('end', () =>
     {
       const
-      route      = self.router.findRoute(request),
-      View       = fetchView(route.view),
+      route      = router.findRoute(request),
       Dispatcher = fetchDispatcher(route.dispatcher);
 
       new Dispatcher(request, route).dispatch((vm) =>
       {
+        const View = fetchView(vm.view || route.view);
         new View(vm, route).compose((html) =>
         {
           o.writeHead(vm.status || 200, vm.headers);

@@ -7,6 +7,6 @@ module.exports = class Json
 
   compose(cb)
   {
-    cb(JSON.stringify(vm.body));
+    cb(JSON.stringify(this.vm.body));
   }
 }
