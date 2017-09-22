@@ -22,7 +22,6 @@ module.exports = class Router
       return !!route.policy;
     });
 
-    return { dispatcher : _route.dispatcher,
-             view       : _route.view };
+    return _route;
   }
 }
