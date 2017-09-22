@@ -8,10 +8,14 @@ module.exports = class Router
   findRoute(request)
   {
     let _route = {};
-    request.url && request.url.path
+    request.url && request.url.pathname
     && this.routes.some((route) =>
     {
-      if(route.policy && !request.url.path.match(route.policy))
+      const policy = route.policy instanceof RegExp
+                   ? route.policy
+                   : new RegExp(`^${route.policy}$`);
+
+      if(route.policy && !request.url.pathname.match(policy))
         return;
 
       _route = Object.assign(_route, route);

@@ -37,6 +37,17 @@ module.exports = class HttpServer
       route      = router.findRoute(request),
       Dispatcher = fetchDispatcher(route.dispatcher);
 
+      switch(i.headers['content-type'])
+      {
+        case 'application/x-www-form-urlencoded':
+          request.body = require('querystring').parse(request.body);
+          break;
+
+        case 'application/json':
+          request.body = JSON.parse(request.body);
+          break;
+      }
+
       new Dispatcher(request, route).dispatch((vm) =>
       {
         const View = fetchView(vm.view || route.view);
