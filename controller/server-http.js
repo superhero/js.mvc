@@ -39,12 +39,12 @@ module.exports = class HttpServer
 
       switch(i.headers['content-type'])
       {
-        case 'application/x-www-form-urlencoded':
-          request.body = require('querystring').parse(request.body);
-          break;
-
         case 'application/json':
           request.body = JSON.parse(request.body);
+          break;
+
+        default:
+          request.body = require('querystring').parse(request.body);
           break;
       }
 
