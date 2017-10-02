@@ -1,4 +1,4 @@
-module.exports = class JsonView
+module.exports = class RawView
 {
   constructor(vm)
   {
@@ -7,6 +7,6 @@ module.exports = class JsonView
 
   compose(cb)
   {
-    cb(JSON.stringify(this.vm.body));
+    cb(this.vm.body);
   }
 }
