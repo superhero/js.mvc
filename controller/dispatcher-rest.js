@@ -1,11 +1,11 @@
 const
-Dispatcher    = require('./controller/dispatcher'),
+Dispatcher    = require('./dispatcher'),
 PageNotFound  =
 {
   status : 404,
   body   : { status  : 'failed',
              message : 'Page Not Found',
-             reason  : 'dispatcher action has not been filled' }
+             reason  : 'action has not been defined' }
 };
 
 module.exports = class RestDispatcher extends Dispatcher
