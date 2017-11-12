@@ -50,6 +50,7 @@ module.exports = class HttpServer
 
       new Dispatcher(request, route).dispatch((vm) =>
       {
+        vm = vm || {};
         const View = fetchView(vm.view || route.view);
         new View(vm, route).compose((html) =>
         {
