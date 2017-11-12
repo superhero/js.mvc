@@ -7,7 +7,7 @@ module.exports = class JsonView
 
   compose(cb)
   {
-    vm.headers['Content-Type'] = 'application/json';
+    this.vm.headers['Content-Type'] = 'application/json';
     cb(JSON.stringify(this.vm.body));
   }
 }
