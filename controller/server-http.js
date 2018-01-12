@@ -42,9 +42,14 @@ module.exports = class HttpServer
         case 'application/json':
           request.body = JSON.parse(request.body);
           break;
-
-        default:
+          
+        case 'application/x-www-form-urlencoded':
+        case 'multipart/form-data':
           request.body = require('querystring').parse(request.body);
+          break;
+          
+        default:
+          //request.body not parsed
           break;
       }
 
